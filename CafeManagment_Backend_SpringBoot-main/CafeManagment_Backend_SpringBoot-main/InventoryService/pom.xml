@@ -142,6 +142,8 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		
+		<final-name>inventory-service</final-name>
 	</build>
 
 </project>
