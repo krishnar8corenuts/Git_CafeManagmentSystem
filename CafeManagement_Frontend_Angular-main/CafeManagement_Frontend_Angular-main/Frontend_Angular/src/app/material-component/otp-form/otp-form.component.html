@@ -1,0 +1,32 @@
+
+
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="otpDetails">
+    <div fxFlex fxLayout="column">
+      <!-- email -->
+
+      <h2>Verification required To continue, complete this verification step. We've sent
+        an OTP to the email <b>{{emailData}}</b>. Please enter it below to
+        complete verification.</h2>
+
+        <mat-form-field appearance="standard" fxFlex>
+          <mat-label>Enter 6 digit Otp here</mat-label>
+          <input matInput formControlName="otp" required>
+          <mat-error *ngIf="otpDetails.controls.otp.touched && otpDetails.controls.otp.invalid">
+            <span *ngIf="otpDetails.controls.otp.errors.required">This feild is mandatory</span>
+            <span *ngIf="otpDetails.controls.otp.errors.pattern">This feild is invalid</span>
+          </mat-error>
+        </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+<!-- Button -->
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="warn" mat-dialog-close><mat-icon>cancel</mat-icon> Close</button>
+  <button mat-raised-button color="primary" type="submit" (click)="handleSubmit()"
+    [disabled]="!(otpDetails.valid &&otpDetails.dirty)">
+    <mat-icon>login</mat-icon> Continue
+  </button>
+
+</mat-dialog-actions>
