@@ -145,7 +145,7 @@
 			</plugin>
 			
 		</plugins>
-		<final-name>authentication-service</final-name>
+		<finalName>authentication-service</finalName>
 	</build>
 
 </project>
