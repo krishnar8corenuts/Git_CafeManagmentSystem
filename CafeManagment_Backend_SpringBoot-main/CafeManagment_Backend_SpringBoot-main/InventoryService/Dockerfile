@@ -1,5 +1,5 @@
 
-FROM eclipse-temurin:11
+FROM eclipse-temurin:17
 VOLUME /tmp
 ADD target/inventory-service.jar inventory-service.jar
 
