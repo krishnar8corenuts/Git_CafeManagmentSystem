@@ -8,8 +8,6 @@ import { SnackbarService } from 'src/app/services/snackbar.service';
 import { AddToCartServiceService } from 'src/app/customer-service/add-to-cart-service.service';
 import { BillService } from 'src/app/services/bill.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
-// import Swal from 'sweetalert2';
-
 
 @Component({
   selector: 'app-checkout',
@@ -87,38 +85,17 @@ export class CheckoutComponent implements OnInit {
       console.log(data);
 
       this.billServuce.generateReport(data).subscribe((Response:any)=>{
-
-        // this.SnackbarService.openSnackBar(
-        //   GlobalConstants.thankyYou,
-        //   'success'
-        // );
-
         this.downloadFile(Response?.uuid);
         this.manageOrderForm.reset();
         this.dataSource=[];
         this.totalAmount=0;
         this.addTocartService.cartPrice=0;
         this.addTocartService.itemCount=0;
-
-        //
-        //swals('Payment Success','','success')
-
         this.SnackbarService.openSnackBar(
           GlobalConstants.thankyYou,
           'success'
         );
 
-
-        // Swal.fire(
-        //   'Good job!',
-        //   'You clicked the button!',
-        //   'success'
-        // )
-
-
-
-
-        //
          this.router.navigateByUrl("/exploremore")
 
       },(error: any) => {
