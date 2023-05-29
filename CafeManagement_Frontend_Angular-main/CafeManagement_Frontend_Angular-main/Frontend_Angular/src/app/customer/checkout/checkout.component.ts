@@ -8,7 +8,8 @@ import { SnackbarService } from 'src/app/services/snackbar.service';
 import { AddToCartServiceService } from 'src/app/customer-service/add-to-cart-service.service';
 import { BillService } from 'src/app/services/bill.service';
 import { NgxUiLoaderService } from 'ngx-ui-loader';
-import swals from 'sweetalert';
+// import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-checkout',
@@ -99,7 +100,20 @@ export class CheckoutComponent implements OnInit {
         this.addTocartService.cartPrice=0;
         this.addTocartService.itemCount=0;
 
-        swals('Payment Success','','success')
+        //
+        //swals('Payment Success','','success')
+
+
+        // Swal.fire(
+        //   'Good job!',
+        //   'You clicked the button!',
+        //   'success'
+        // )
+
+
+
+
+        //
          this.router.navigateByUrl("/exploremore")
 
       },(error: any) => {
