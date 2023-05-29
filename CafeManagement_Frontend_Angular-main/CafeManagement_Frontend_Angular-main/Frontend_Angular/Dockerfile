@@ -1,5 +1,4 @@
 # Stage 1: Compile and Build angular codebase
-adoptopenjdk/openjdk11:jre-11.0.19_7-ubuntu
 
 # Use official node image as the base image
 FROM node:alpine as builder
