@@ -1,5 +1,5 @@
 
-FROM adoptopenjdk/openjdk11
+FROM eclipse-temurin:11
 VOLUME /tmp
 ADD target/inventory-service.jar inventory-service.jar
 
