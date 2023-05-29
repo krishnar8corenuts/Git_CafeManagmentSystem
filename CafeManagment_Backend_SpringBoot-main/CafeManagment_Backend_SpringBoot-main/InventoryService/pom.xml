@@ -14,8 +14,9 @@
 	<name>InventoryService</name>
 	<description>This service is for inventory</description>
 	<properties>
-		<java.version>1.8</java.version>
-	</properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
 	<dependencies>
 
 		<dependency>
