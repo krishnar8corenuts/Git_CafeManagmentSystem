@@ -103,6 +103,11 @@ export class CheckoutComponent implements OnInit {
         //
         //swals('Payment Success','','success')
 
+        this.SnackbarService.openSnackBar(
+          GlobalConstants.thankyYou,
+          'success'
+        );
+
 
         // Swal.fire(
         //   'Good job!',
