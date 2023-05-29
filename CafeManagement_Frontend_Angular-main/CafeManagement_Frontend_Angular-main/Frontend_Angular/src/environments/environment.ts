@@ -5,8 +5,8 @@ export const environment = {
   authurl:'http://localhost:9021',//for authentication service
   apiurl:'http://localhost:9022',//for inventory
 
-  prodauturl:'http://10.8.9.10:9021',//for authentication service
-  prodapiurl:'http://10.8.9.10:9021', //for inventory,
+    prodauturl:'http://34.122.139.85:9021',//for authentication service
+  prodapiurl:'http://34.122.139.85:9022', //for inventory,
 
 
   getApiUrl(data:string)
